@@ -44,7 +44,9 @@ namespace SocketCom
                             client.Send(data);
 
                             byte[] buffer = new byte[1024];
+                            
                             client.Receive(buffer);
+                            
 
                             msg = Encoding.ASCII.GetString(buffer);
                             Console.WriteLine(msg);
